@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .input-label {
+        @apply text-xs text-emerald-600 pb-1;
+    }
+
+    .input-field {
+        @apply border rounded border-emerald-800 py-1 px-2;
+    }
+
+    .btn {
+        @apply bg-emerald-800 text-white px-4 py-2 rounded cursor-pointer
+    }
+}
