@@ -17,3 +17,11 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+@media print {
+	header {
+		display: none;
+	}
+}
+</style>

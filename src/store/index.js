@@ -3,7 +3,7 @@ import { createStore } from 'vuex'
 import popup from '@/store/popup';
 
 const updateColors = (color, action) => {
-	let saved  = sessionStorage.getItem('colors');
+	let saved  = localStorage.getItem('colors');
 	let colors = saved ? JSON.parse(saved) : [];
 
 	if (action === 'add') {
@@ -14,11 +14,11 @@ const updateColors = (color, action) => {
 	}
 
 	if (colors.length === 0) {
-		sessionStorage.removeItem('colors');
+		localStorage.removeItem('colors');
 		return;
 	}
 
-	sessionStorage.setItem('colors', JSON.stringify(colors));
+	localStorage.setItem('colors', JSON.stringify(colors));
 }
 
 export default createStore({
@@ -68,7 +68,7 @@ export default createStore({
 			state.searchVendor = string;
 		},
 		getColors(state) {
-			let saved = sessionStorage.getItem('colors');
+			let saved = localStorage.getItem('colors');
 
 			state.colors = saved ? JSON.parse(saved) : [];
 		},

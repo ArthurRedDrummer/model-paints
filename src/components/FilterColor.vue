@@ -1,5 +1,5 @@
 <template>
-	<section class="flex flex-wrap mb-5 gap-x-2" v-show="active && active > 1">
+	<section class="filter flex flex-wrap mb-5 gap-x-2" v-show="active && active > 1">
 		<h2 class="text-2xl pb-2 w-full">Filter</h2>
 		<div class="flex gap-x-4">
 			<div class="flex flex-col">
@@ -62,3 +62,11 @@ export default {
 	}
 }
 </script>
+
+<style>
+@media print {
+	.filter {
+		display: none;
+	}
+}
+</style>

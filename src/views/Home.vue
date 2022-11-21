@@ -1,9 +1,9 @@
 <template>
-	<section class="container mx-auto flex space-x-10">
-		<section class="w-1/5">
+	<section class="main container mx-auto flex space-x-10">
+		<section class="aside w-1/5">
 			<add-color/>
 		</section>
-		<section class="w-4/5">
+		<section class="data w-4/5">
 			<filter-color/>
 			<colors/>
 		</section>
@@ -32,3 +32,21 @@ export default {
 	}
 }
 </script>
+
+<style scoped>
+@media print {
+	.main {
+		width: 100%;
+		margin: 0;
+		display: block;
+	}
+
+	.data {
+		width: 100%;
+	}
+
+	.aside {
+		display: none;
+	}
+}
+</style>
